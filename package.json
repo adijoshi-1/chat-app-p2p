@@ -1,0 +1,59 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "b4a": "^1.6.1",
+    "concurrently": "^7.6.0",
+    "corestore": "^6.5.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "electron": "^23.1.1",
+    "graceful-goodbye": "^1.2.1",
+    "hypercore-crypto": "^3.3.1",
+    "hyperdrive": "^11.0.0-alpha.10",
+    "hyperswarm": "^4.3.7",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "sweetalert2": "^11.7.2",
+    "uuid": "^9.0.0",
+    "wait-on": "^7.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "wait-on tcp:3000 && electron .",
+    "dev": "concurrently \"npm:start\" \"npm:electron\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "prettier": "2.8.4"
+  }
+}
